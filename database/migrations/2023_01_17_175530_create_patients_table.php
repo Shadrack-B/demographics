@@ -30,11 +30,11 @@ return new class extends Migration
             $table->foreignId("facility")->nullable();
             $table->string("facility_room_no")->nullable();
             $table->date("date_of_illness")->nullable();
-            $table->boolean("evaluated_by_physicians")->nullable();
-            $table->boolean("evaluated_at_emergency_room")->nullable();
-            $table->boolean("hospitalized")->nullable();
+            $table->string("evaluated_by_physicians")->nullable();
+            $table->string("evaluated_at_emergency_room")->nullable();
+            $table->string("hospitalized")->nullable();
             $table->date("date_hospitalized")->nullable();
-            $table->boolean("discharged")->nullable();
+            $table->String("discharged")->nullable();
             $table->date("date_discharged")->nullable();
             $table->timestamps();
         });
