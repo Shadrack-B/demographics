@@ -36,9 +36,10 @@ class PatientController extends Controller
          $data = Patient::where("id", "=", $id )->first();
          $races = ["white", "black", "asian", "hawaiian", "american_indian", "unknown"];
          $ethnicities = ["hispanic", "not_hispanic", "unknown"];
+         $sex = ["male", "female"];
                 //  dd($data);
 
-        return view("edit-patient", compact('data', 'races', 'ethnicities') );
+        return view("edit-patient", compact('data', 'races', 'ethnicities', 'sex') );
     }
 
     public function update_patient(Request $request){
