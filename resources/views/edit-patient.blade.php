@@ -61,10 +61,10 @@
             
             
           </div>
-          <div class="md-3">
+          <div class="row">
             <label for="sex" class="form-label">Ethnicity</label>
             @foreach ($ethnicities as $ethnicity)
-                <div class="form-check">
+            <div class="form-check col">
               <input class="form-check-input" type="radio" name="{{$ethnicity}}" id="flexRadioDefault1" value="{{$ethnicity}}" 
               @if ($data->ethnicity == $ethnicity)
                   checked
@@ -74,19 +74,6 @@
               </label>
             </div>
             @endforeach
-            
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="ethnicity" id="flexRadioDefault1" value="not_hispanic">
-              <label class="form-check-label" for="flexRadioDefault1">
-                Not hispanic
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="ethnicity" id="flexRadioDefault1" value="unknown">
-              <label class="form-check-label" for="flexRadioDefault1">
-                Unknown
-              </label>
-            </div>
             
           </div>
 
