@@ -29,13 +29,13 @@
           <div class="md-3">
             <label for="sex" class="form-label">Sex</label>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="sex" id="flexRadioDefault1">
+              <input class="form-check-input" type="radio" name="sex" id="flexRadioDefault1" value="male">
               <label class="form-check-label" for="flexRadioDefault1">
                 Male
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="sex" id="flexRadioDefault2" checked>
+              <input class="form-check-input" type="radio" name="sex" id="flexRadioDefault2" value="female" checked>
               <label class="form-check-label" for="flexRadioDefault2">
                 Female
               </label>
@@ -44,19 +44,19 @@
           <div class="md-3">
             <label for="sex" class="form-label">Race</label>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="race" id="flexRadioDefault1" checked>
+              <input class="form-check-input" type="radio" name="race" id="flexRadioDefault1" value="white" checked>
               <label class="form-check-label" for="flexRadioDefault1" >
                 White
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="race" id="flexRadioDefault1">
+              <input class="form-check-input" type="radio" name="race" id="flexRadioDefault1" value="black">
               <label class="form-check-label" for="flexRadioDefault1">
                 Black/African American
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="race" id="flexRadioDefault1">
+              <input class="form-check-input" type="radio" name="race" id="flexRadioDefault1" value="asian">
               <label class="form-check-label" for="flexRadioDefault1">
                 Asian
               </label>
@@ -65,19 +65,19 @@
           <div class="md-3">
             <label for="sex" class="form-label">Ethnicity</label>
             <<div class="form-check">
-              <input class="form-check-input" type="radio" name="ethnicity" id="flexRadioDefault1" checked>
+              <input class="form-check-input" type="radio" name="ethnicity" id="flexRadioDefault1" value="hispanic" checked>
               <label class="form-check-label" for="flexRadioDefault1" >
                 Hispanic
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="ethnicity" id="flexRadioDefault1">
+              <input class="form-check-input" type="radio" name="ethnicity" id="flexRadioDefault1" value="not_hispanic">
               <label class="form-check-label" for="flexRadioDefault1">
                 Not hispanic
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="ethnicity" id="flexRadioDefault1">
+              <input class="form-check-input" type="radio" name="ethnicity" id="flexRadioDefault1" value="unknown">
               <label class="form-check-label" for="flexRadioDefault1">
                 Unknown
               </label>

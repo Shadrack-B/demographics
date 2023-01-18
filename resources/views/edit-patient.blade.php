@@ -30,13 +30,17 @@
           <div class="md-3">
             <label for="sex" class="form-label">Sex</label>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="sex" id="flexRadioDefault1" checked >
+              <input class="form-check-input" type="radio" name="sex" id="flexRadioDefault1" value="male" @if ($data->sex =="male")
+                  checked
+              @endif>
               <label class="form-check-label" for="flexRadioDefault1">
                 Male
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="sex" id="flexRadioDefault2" value="{{$data->sex}}" >
+              <input class="form-check-input" type="radio" name="sex" id="flexRadioDefault2" value="female" @if ($data->sex =="female")
+                  checked
+              @endif> 
               <label class="form-check-label" for="flexRadioDefault2">
                 Female
               </label>
@@ -44,41 +48,41 @@
           </div>
           <div class="md-3">
             <label for="sex" class="form-label">Race</label>
+            @foreach ($races as $race)
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="race" id="flexRadioDefault1" value="{{$data->race}}" checked>
+              <input class="form-check-input" type="radio" name="race" id="flexRadioDefault1" value="{{$race}}" @if ($data->race ==$race)
+                  checked
+              @endif>
               <label class="form-check-label" for="flexRadioDefault1" >
-                White
+                {{$race}}
               </label>
             </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="race" id="flexRadioDefault1" value="{{$data->race}}">
-              <label class="form-check-label" for="flexRadioDefault1">
-                Black/African American
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="race" id="flexRadioDefault1" value="{{$data->race}}">
-              <label class="form-check-label" for="flexRadioDefault1">
-                Asian
-              </label>
-            </div>
+            @endforeach
+            
+            
           </div>
           <div class="md-3">
             <label for="sex" class="form-label">Ethnicity</label>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="ethnicity" id="flexRadioDefault1" value="{{$data->ethnicity}}" checked>
+            @foreach ($ethnicities as $ethnicity)
+                <div class="form-check">
+              <input class="form-check-input" type="radio" name="{{$ethnicity}}" id="flexRadioDefault1" value="{{$ethnicity}}" 
+              @if ($data->ethnicity == $ethnicity)
+                  checked
+              @endif>
               <label class="form-check-label" for="flexRadioDefault1" >
-                Hispanic
+                {{$ethnicity}}
               </label>
             </div>
+            @endforeach
+            
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="ethnicity" id="flexRadioDefault1" value="{{$data->ethnicity}}">
+              <input class="form-check-input" type="radio" name="ethnicity" id="flexRadioDefault1" value="not_hispanic">
               <label class="form-check-label" for="flexRadioDefault1">
                 Not hispanic
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="ethnicity" id="flexRadioDefault1" value="{{$data->ethnicity}}">
+              <input class="form-check-input" type="radio" name="ethnicity" id="flexRadioDefault1" value="unknown">
               <label class="form-check-label" for="flexRadioDefault1">
                 Unknown
               </label>

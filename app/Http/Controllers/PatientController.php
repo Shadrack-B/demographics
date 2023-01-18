@@ -28,11 +28,17 @@ class PatientController extends Controller
         $patient->save();
 
         return redirect()->back();
+
+        // dd($request);
     }
 
     public function edit_patient($id){
          $data = Patient::where("id", "=", $id )->first();
-        return view("edit-patient", compact('data') );
+         $races = ["white", "black", "asian", "hawaiian", "american_indian", "unknown"];
+         $ethnicities = ["hispanic", "not_hispanic", "unknown"];
+                //  dd($data);
+
+        return view("edit-patient", compact('data', 'races', 'ethnicities') );
     }
 
     public function update_patient(Request $request){
